@@ -14,3 +14,7 @@ void main() async {
   covid.close();
 }
 ```
+
+## More info
+- API is fetched from https://api.covid19api.com
+- This is my first API wrapper and my first project in dart, I'll be happy of getting any recommendation ❤️
