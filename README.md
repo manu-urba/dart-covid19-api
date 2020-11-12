@@ -20,4 +20,4 @@ https://pub.dev/documentation/covid19/latest/covid19/covid19-library.html (Work 
 
 ## More info
 - API is fetched from https://api.covid19api.com
-- This is my first API wrapper and my first project in dart, I'll be happy of getting any recommendation ❤️
+- This is my first API wrapper and my first project in dart, I'll be happy to get any recommendation ❤️
