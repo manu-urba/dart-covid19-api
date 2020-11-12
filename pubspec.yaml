@@ -1,0 +1,11 @@
+name: covid19
+description: Covid19 API wrapper for Dart.
+version: 0.0.1
+homepage: https://github.com/manu-urba/dart-covid19-api
+
+environment:
+  sdk: '>=2.6.0 <3.0.0'
+
+dependencies:
+  dio: ^3.0.10
+  meta: ^1.2.3
