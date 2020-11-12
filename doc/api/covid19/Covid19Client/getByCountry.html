@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the getByCountry method from the Covid19Client class, for the Dart programming language.">
+  <title>getByCountry method - Covid19Client class - covid19 library - Dart API</title>
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500,400i,400,300|Source+Sans+Pro:400,300,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="../../static-assets/github.css">
+  <link rel="stylesheet" href="../../static-assets/styles.css">
+  <link rel="icon" href="../../static-assets/favicon.png">
+
+</head>
+
+<body data-base-href="../../"
+      data-using-base-href="false">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../../index.html">covid19</a></li>
+    <li><a href="../../covid19/covid19-library.html">covid19</a></li>
+    <li><a href="../../covid19/Covid19Client-class.html">Covid19Client</a></li>
+    <li class="self-crumb">getByCountry method</li>
+  </ol>
+  <div class="self-name">getByCountry</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<main>
+
+  <div id="dartdoc-sidebar-left" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+      <form class="search-sidebar" role="search">
+        <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+      </form>
+    </header>
+    
+    <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+      <li><a href="../../index.html">covid19</a></li>
+      <li><a href="../../covid19/covid19-library.html">covid19</a></li>
+      <li><a href="../../covid19/Covid19Client-class.html">Covid19Client</a></li>
+      <li class="self-crumb">getByCountry method</li>
+    </ol>
+    
+    <h5>Covid19Client class</h5>
+    <ol>
+    
+        <li class="section-title"><a href="../../covid19/Covid19Client-class.html#constructors">Constructors</a></li>
+        <li><a href="../../covid19/Covid19Client/Covid19Client.html">Covid19Client</a></li>
+    
+        <li class="section-title inherited">
+            <a href="../../covid19/Covid19Client-class.html#instance-properties">Properties</a>
+        </li>
+        <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/hashCode.html">hashCode</a></li>
+        <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/runtimeType.html">runtimeType</a></li>
+    
+        <li class="section-title"><a href="../../covid19/Covid19Client-class.html#instance-methods">Methods</a></li>
+        <li><a href="../../covid19/Covid19Client/close.html">close</a></li>
+        <li><a href="../../covid19/Covid19Client/getByCountry.html">getByCountry</a></li>
+        <li><a href="../../covid19/Covid19Client/getByCountryTotal.html">getByCountryTotal</a></li>
+        <li><a href="../../covid19/Covid19Client/getCountries.html">getCountries</a></li>
+        <li><a href="../../covid19/Covid19Client/getDayOne.html">getDayOne</a></li>
+        <li><a href="../../covid19/Covid19Client/getDayOneTotal.html">getDayOneTotal</a></li>
+        <li><a href="../../covid19/Covid19Client/getLive.html">getLive</a></li>
+        <li><a href="../../covid19/Covid19Client/getSummary.html">getSummary</a></li>
+        <li><a href="../../covid19/Covid19Client/getWorldTotal.html">getWorldTotal</a></li>
+        <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
+        <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/toString.html">toString</a></li>
+    
+        <li class="section-title inherited"><a href="../../covid19/Covid19Client-class.html#operators">Operators</a></li>
+        <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/operator_equals.html">operator ==</a></li>
+    
+    
+    
+    
+    
+    </ol>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+      <div><h1><span class="kind-method">getByCountry</span> method </h1></div>
+
+    <section class="multi-line-signature">
+      <span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a></span>&gt;</span></span>
+            <span class="name ">getByCountry</span>
+(<wbr><ol class="parameter-list"><li><span class="parameter" id="getByCountry-param-country">{<span>@<a href="https://pub.dev/documentation/meta/1.2.3/meta/required-constant.html">required</a></span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">country</span>, </span></li>
+<li><span class="parameter" id="getByCountry-param-status"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">status</span>, </span></li>
+<li><span class="parameter" id="getByCountry-param-live"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">live</span>: <span class="default-value">false</span>, </span></li>
+<li><span class="parameter" id="getByCountry-param-from"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">from</span>, </span></li>
+<li><span class="parameter" id="getByCountry-param-to"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">to</span>}</span></li>
+</ol>)
+      
+    </section>
+    
+    <section class="summary source-code" id="source">
+      <h2><span>Implementation</span></h2>
+      <pre class="language-dart"><code class="language-dart">Future&lt;List&gt; getByCountry(
+    {@required String country,
+    String status,
+    bool live = false,
+    String from,
+    String to}) async {
+  var res = await _dio.get(
+      &#39;&#47;country&#47;$country&#39; +
+          (status != null
+              ? live
+                  ? &#39;&#47;status&#47;$status&#47;live&#39;
+                  : &#39;&#47;status&#47;$status&#39;
+              : &#39;&#39;),
+      queryParameters: {&#39;from&#39;: from, &#39;to&#39;: to});
+
+  var data = res.data;
+  List list = List();
+
+  if (status != null) {
+    for (var i in data) {
+      list.add(
+        Covid19CountryEx(
+          country: i[&#39;Country&#39;],
+          countryCode: i[&#39;CountryCode&#39;],
+          province: i[&#39;Province&#39;],
+          city: i[&#39;City&#39;],
+          cityCode: i[&#39;CityCode&#39;],
+          lat: i[&#39;Lat&#39;],
+          lon: i[&#39;Lon&#39;],
+          cases: i[&#39;Cases&#39;],
+          status: i[&#39;Status&#39;],
+          date: i[&#39;Date&#39;],
+        ),
+      );
+    }
+    return list;
+  }
+  for (var i in data) {
+    list.add(
+      Covid19CountryAllStatus(
+        country: i[&#39;Country&#39;],
+        countryCode: i[&#39;CountryCode&#39;],
+        province: i[&#39;Province&#39;],
+        city: i[&#39;City&#39;],
+        cityCode: i[&#39;CityCode&#39;],
+        lat: i[&#39;Lat&#39;],
+        lon: i[&#39;Lon&#39;],
+        confirmed: i[&#39;Confirmed&#39;],
+        deaths: i[&#39;Deaths&#39;],
+        recovered: i[&#39;Recovered&#39;],
+        active: i[&#39;Active&#39;],
+        date: i[&#39;Date&#39;],
+      ),
+    );
+  }
+  return list;
+}</code></pre>
+    </section>
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    covid19
+      0.0.1
+  </span>
+
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="../../static-assets/typeahead.bundle.min.js"></script>
+<script src="../../static-assets/highlight.pack.js"></script>
+<script src="../../static-assets/URI.js"></script>
+<script src="../../static-assets/script.js"></script>
+
+
+</body>
+
+</html>
