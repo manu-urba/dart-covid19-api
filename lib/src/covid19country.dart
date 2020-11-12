@@ -6,7 +6,7 @@ class Covid19CountryBase {
   final String slug;
   final String iso2;
 
-  Covid19CountryBase({this.country, this.slug, this.iso2});
+  const Covid19CountryBase({this.country, this.slug, this.iso2});
 }
 
 class Covid19Country {
@@ -22,7 +22,7 @@ class Covid19Country {
   final String date;
   final Map<String, dynamic> premium;
 
-  Covid19Country(
+  const Covid19Country(
       {this.country,
       this.countryCode,
       this.slug,
@@ -50,7 +50,7 @@ class Covid19CountryAllStatus {
   final int active;
   final String date;
 
-  Covid19CountryAllStatus(
+  const Covid19CountryAllStatus(
       {this.country,
       this.countryCode,
       this.province,
@@ -77,7 +77,7 @@ class Covid19CountryEx {
   final String status;
   final String date;
 
-  Covid19CountryEx(
+  const Covid19CountryEx(
       {this.country,
       this.countryCode,
       this.province,
