@@ -19,5 +19,5 @@ void main() async {
 https://pub.dev/documentation/covid19/latest/covid19/covid19-library.html
 
 ## More info
-- API is fetched from https://api.covid19api.com
+- API is fetched from https://api.covid19api.com (JHU CSSE COVID-19 Data)
 - This is my first API wrapper and my first project in dart, I'll be happy to get any recommendation ❤️
