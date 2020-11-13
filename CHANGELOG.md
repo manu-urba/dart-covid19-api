@@ -1,6 +1,9 @@
 # Change Log
 All changes to this project will be documented in this file.
 
+## [0.0.4] - 2020-11-13
+Documentation fix (gitignore).
+
 ## [0.0.3] - 2020-11-13
 Documentation is now complete.
 
