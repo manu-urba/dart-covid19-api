@@ -7,17 +7,32 @@ import 'package:meta/meta.dart';
 import 'covid19summary.dart';
 import 'covid19country.dart';
 
+/// The base class which allows to create a covid19 client.
+///
+/// You have to create an instance of this class to start working with this package.
 class Covid19Client {
   final _dio = Dio(BaseOptions(baseUrl: 'https://api.covid19api.com'));
 
+  /// Shuts down the covid19 client.
+  ///
+  /// If [force] is `false` (the default) the [Covid19Client] will be kept alive
+  /// until all active connections are done. If [force] is `true` any active
+  /// connections will be closed to immediately release all resources. These
+  /// closed connections will receive an error event to indicate that the client
+  /// was shut down. In both cases trying to establish a new connection after
+  /// calling [close] will throw an exception.
   void close({bool force = false}) => _dio.close(force: force);
 
+  /// Fetches summary informations, see [Covid19Summary].
   Future<Covid19Summary> getSummary() async {
     var res = await _dio.get('/summary');
     var data = Covid19Summary(res.data);
     return data;
   }
 
+  /// Fetches countries informations.
+  ///
+  /// It returns a list of [Covid19CountryBase].
   Future<List<Covid19CountryBase>> getCountries() async {
     var res = await _dio.get('/countries');
     var data = res.data;
@@ -31,6 +46,11 @@ class Covid19Client {
     return list;
   }
 
+  /// Fetches countries information since the day one.
+  ///
+  /// It returns a list of [Covid19CountryAllStatus].
+  ///
+  /// The [status] can be: 'confirmed', 'recovered' or 'deaths'.
   Future<List<Covid19CountryAllStatus>> getDayOne(
       {@required String country, String status, bool live = false}) async {
     if (live && status == null) status = 'confirmed';
@@ -61,6 +81,12 @@ class Covid19Client {
     return list;
   }
 
+  /// Fetches countries information since the day one.
+  ///
+  /// If the [status] is set, the method returns a list of [Covid19CountryEx]
+  /// Otherwise it returns a list of [Covid19CountryAllStatus].
+  ///
+  /// The [status] can be: 'confirmed', 'recovered' or 'deaths'.
   Future<List> getDayOneTotal({@required String country, String status}) async {
     var res = await _dio.get('/total/dayone/country/$country' +
         (status != null ? '/status/$status' : ''));
@@ -108,6 +134,14 @@ class Covid19Client {
     return list;
   }
 
+  /// Fetches informations about a single country.
+  ///
+  /// If the [status] is set, the method returns a list of [Covid19CountryEx]
+  /// In this case you have to specify [from] and [to] parameters.
+  ///
+  /// Otherwise it returns a list of [Covid19CountryAllStatus].
+  ///
+  /// The [status] can be: 'confirmed', 'recovered' or 'deaths'.
   Future<List> getByCountry(
       {@required String country,
       String status,
@@ -166,6 +200,14 @@ class Covid19Client {
     return list;
   }
 
+  /// Fetches total informations about a single country.
+  ///
+  /// If the [status] is set, the method returns a list of [Covid19CountryEx]
+  /// In this case you have to specify [from] and [to] parameters.
+  ///
+  /// Otherwise it returns a list of [Covid19CountryAllStatus].
+  ///
+  /// The [status] can be: 'confirmed', 'recovered' or 'deaths'.
   Future<List> getByCountryTotal(
       {@required String country, String status, String from, String to}) async {
     var res = await _dio.get(
@@ -216,6 +258,14 @@ class Covid19Client {
     return list;
   }
 
+  /// Fetches live informations about a single country after a specific [date].
+  ///
+  /// Don't forget to specify the [date] parameter
+  /// While specifying [status] parameter.
+  ///
+  /// It returns a list of [Covid19CountryAllStatus].
+  ///
+  /// The [status] can be: 'confirmed', 'recovered' or 'deaths'.
   Future<List<Covid19CountryAllStatus>> getLive(
       {@required String country, String status, String date}) async {
     var res = await _dio.get('/live/country/$country' +
@@ -248,6 +298,9 @@ class Covid19Client {
     return list;
   }
 
+  /// Fetches countries informations.
+  ///
+  /// It returns a list of [Covid19GlobalDataTotal].
   Future<Covid19GlobalDataTotal> getWorldTotal() async {
     var res = await _dio.get('/world/total');
     var data = Covid19GlobalDataTotal(res.data);

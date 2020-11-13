@@ -16,7 +16,7 @@ void main() async {
 ```
 
 ## Documentation
-https://pub.dev/documentation/covid19/latest/covid19/covid19-library.html (Work in progress)
+https://pub.dev/documentation/covid19/latest/covid19/covid19-library.html
 
 ## More info
 - API is fetched from https://api.covid19api.com

@@ -3,6 +3,39 @@
 
 import 'covid19country.dart';
 
+/// Summary class.
+///
+/// You can retrieve several informations from this class
+/// Here's an example of a JSON API responce:
+/// ```json
+/// {
+///   "Message": "",
+///   "Global": {
+///     "NewConfirmed": 606451,
+///     "TotalConfirmed": 52725633,
+///     "NewDeaths": 9020,
+///     "TotalDeaths": 1293096,
+///     "NewRecovered": 342034,
+///     "TotalRecovered": 34261480
+///   },
+///   "Countries": [
+///     {
+///       "Country": "Afghanistan",
+///       "CountryCode": "AF",
+///       "Slug": "afghanistan",
+///       "NewConfirmed": 186,
+///       "TotalConfirmed": 42795,
+///       "NewDeaths": 10,
+///       "TotalDeaths": 1591,
+///       "NewRecovered": 57,
+///       "TotalRecovered": 35024,
+///       "Date": "2020-11-13T07:55:56Z",
+///       "Premium": {}
+///      },
+///      ...
+///   ]
+/// }
+/// ```
 class Covid19Summary {
   final Map _map;
 
@@ -33,6 +66,19 @@ class Covid19Summary {
   DateTime get date => DateTime.parse(_map['Date']);
 }
 
+/// You can retrieve global data from this class.
+///
+/// Here's an example of a JSON API responce:
+/// ```json
+/// {
+///   "NewConfirmed": 606451,
+///   "TotalConfirmed": 52725633,
+///   "NewDeaths": 9020,
+///   "TotalDeaths": 1293096,
+///   "NewRecovered": 342034,
+///   "TotalRecovered": 34261480
+/// }
+/// ```
 class Covid19GlobalData {
   final Map<String, dynamic> _map;
 
@@ -46,6 +92,16 @@ class Covid19GlobalData {
   int get totalRecovered => _map['TotalRecovered'];
 }
 
+/// You can retrieve global data from this class.
+///
+/// Here's an example of a JSON API responce:
+/// ```json
+/// {
+///   "TotalConfirmed": 52725633,
+///   "TotalDeaths": 1293096,
+///   "TotalRecovered": 34261480
+/// }
+/// ```
 class Covid19GlobalDataTotal {
   final Map<String, dynamic> _map;
 
