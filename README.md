@@ -1,4 +1,4 @@
-# dart-covid19-api [![pub package](https://img.shields.io/pub/v/badge.svg)](https://pub.dartlang.org/packages/covid19)
+# dart-covid19-api [![pub package](https://img.shields.io/pub/v/covid19.svg)](https://pub.dartlang.org/packages/covid19)
 Covid-19 API wrapper for Dart
 
 ## Basic usage
