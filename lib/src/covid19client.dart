@@ -48,10 +48,10 @@ class Covid19Client {
 
   /// Fetches countries information since the day one.
   ///
-  /// It returns a list of [Covid19CountryAllStatus].
+  /// It returns a list of [Covid19CountryEx].
   ///
   /// The [status] can be: 'confirmed', 'recovered' or 'deaths'.
-  Future<List> getDayOne(
+  Future<List<Covid19CountryEx>> getDayOne(
       {@required String country, String status, bool live = false}) async {
     if (live && status == null) status = 'confirmed';
     var res = await _dio.get('/dayone/country/$country' +
