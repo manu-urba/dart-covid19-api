@@ -56,7 +56,7 @@ void main() async {
   print('''
   -- COUNTRY TOTAL DATA --
       ''');
-  for (int i = 0; i < 10; i++) {
+  for (int i = 0; i < 10; ++i) {
     print(''' 
       On November ${i + 10}, 2020: ${countrytotal[1].country} has ${countrytotal[i].confirmed} confirmed cases.''');
   }
