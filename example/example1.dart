@@ -77,5 +77,22 @@ void main() async {
       Total deaths:    ${worldtotal.totalDeaths}
       Total recovered: ${worldtotal.totalRecovered}
       ''');
+
+  var world = await covid.getWorld(
+      from: '2020-11-10T00:00:00Z', to: '2020-11-15T00:00:00Z');
+  print('''
+  -- COUNTRY TOTAL DATA from November 11, 2020 to November 14, 2020 --
+      ''');
+  for (int i = 0; i < 5; ++i) {
+    print(''' 
+      On November ${i + 10}, 2020-
+                          New Confirmed cases:   ${world[i].newConfirmed}
+                          Total Confirmed cases: ${world[i].totalConfirmed}
+                          New Deaths:            ${world[i].newDeaths}
+                          Total Deaths:          ${world[i].totalDeaths}
+                          New Recovered:         ${world[i].newRecovered}
+                          Total Recovered:       ${world[i].totalRecovered}''');
+  }
+
   covid.close();
 }
