@@ -304,4 +304,26 @@ class Covid19Client {
     var data = Covid19GlobalDataTotal(res.data);
     return data;
   }
+
+  /// Fetches all live cases by case type for a country after a given date.
+  /// These records are pulled every 10 minutes and are ungrouped
+  ///
+  /// It returns a list of [CountryCases].
+  Future<List<CountryCases>> getWorld({String from, String to}) async {
+    var res =
+        await _dio.get('/world', queryParameters: {'from': from, 'to': to});
+    var data = res.data;
+    List<CountryCases> list = List();
+    for (var i in data) {
+      list.add(CountryCases(
+        newConfirmed: i['NewConfirmed'],
+        totalConfirmed: i['TotalConfirmed'],
+        newDeaths: i['NewDeaths'],
+        totalDeaths: i['TotalDeaths'],
+        newRecovered: i['NewRecovered'],
+        totalRecovered: i['TotalRecovered'],
+      ));
+    }
+    return list;
+  }
 }
