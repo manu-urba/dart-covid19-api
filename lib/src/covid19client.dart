@@ -51,18 +51,18 @@ class Covid19Client {
   /// It returns a list of [Covid19CountryAllStatus].
   ///
   /// The [status] can be: 'confirmed', 'recovered' or 'deaths'.
-  Future<List<Covid19CountryAllStatus>> getDayOne(
+  Future<List> getDayOne(
       {@required String country, String status, bool live = false}) async {
     if (live && status == null) status = 'confirmed';
     var res = await _dio.get('/dayone/country/$country' +
         (status != null ? '/status/$status' : '') +
         (live ? '/live' : ''));
     var data = res.data;
-    List<Covid19CountryAllStatus> list = List();
+    List list = List();
 
     for (var i in data) {
       list.add(
-        Covid19CountryAllStatus(
+        Covid19CountryEx(
           country: i['Country'],
           countryCode: i['CountryCode'],
           province: i['Province'],
@@ -70,10 +70,8 @@ class Covid19Client {
           cityCode: i['CityCode'],
           lat: i['Lat'],
           lon: i['Lon'],
-          confirmed: i['Confirmed'],
-          deaths: i['Deaths'],
-          recovered: i['Recovered'],
-          active: i['Active'],
+          cases: i['Cases'],
+          status: i['Status'],
           date: i['Date'],
         ),
       );
