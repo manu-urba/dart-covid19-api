@@ -58,7 +58,7 @@ class Covid19Client {
         (status != null ? '/status/$status' : '') +
         (live ? '/live' : ''));
     var data = res.data;
-    List list = List();
+    List<Covid19CountryEx> list = List();
 
     for (var i in data) {
       list.add(
