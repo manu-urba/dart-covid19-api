@@ -192,3 +192,45 @@ class Covid19CountryEx {
       this.status,
       this.date});
 }
+
+/// Several country informations.
+///
+/// Example JSON API responce of a [List] of [Covid19Country]:
+/// ```json
+/// [
+///   ...
+///   {
+///     "NewConfirmed": 33517,
+///     "TotalConfirmed": 1293715,
+///     "NewDeaths": 563,
+///     "TotalDeaths": 51020,
+///     "NewRecovered": 13,
+///     "TotalRecovered": 3031
+///   },
+///   {
+///     "NewConfirmed": 153496,
+///     "TotalConfirmed": 10552821,
+///     "NewDeaths": 919,
+///     "TotalDeaths": 242423,
+///     "NewRecovered": 54081,
+///     "TotalRecovered": 4051256
+///   },
+///   ...
+/// ]
+/// ```
+class CountryCases {
+  final int newConfirmed;
+  final int totalConfirmed;
+  final int newDeaths;
+  final int totalDeaths;
+  final int newRecovered;
+  final int totalRecovered;
+
+  const CountryCases(
+      {this.newConfirmed,
+      this.totalConfirmed,
+      this.newDeaths,
+      this.totalDeaths,
+      this.newRecovered,
+      this.totalRecovered});
+}
